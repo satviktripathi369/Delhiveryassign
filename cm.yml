@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wordpress-homepage
+data:
+  front-page.php: |
+    <?php
+    get_header();
+    echo '<div style="text-align: center; background-color: #f0f8ff; padding: 20px;">';
+    echo '<h1 style="color: #ff4500;">Welcome to My Demo WordPress Site!</h1>';
+    echo '<p>This change was deployed using CI/CD.</p>';
+    echo '</div>';
+    get_footer();
+    ?>
